@@ -11,9 +11,4 @@ import { ModalComponent } from '../modal/modal.component';
 })
 export class CardsComponent {
   @Input() tvShows: any;
-  @Output() currentShow: EventEmitter <any> = new EventEmitter();
-
-  openModal() {
-    console.log("Abrir modal.");
-  }
 }

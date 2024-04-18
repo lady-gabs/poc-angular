@@ -1,10 +1,10 @@
 <!-- <p>cards works!</p> -->
 
 <div *ngIf="tvShows.show.image !== null; else withImage">
-    <img width="200px" srcset="{{tvShows.show.image.medium}}" alt="{{tvShows.show.name}}" (click)="openModal()">
+    <img width="200px" srcset="{{tvShows.show.image.medium}}" alt="{{tvShows.show.name}}" (click)="modal.showModal()">
 </div>
 <ng-template #withImage>
-    <svg (click)="openModal()" width="200px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 115.19 123.38" xml:space="preserve">
+    <svg (click)="modal.showModal()" width="200px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 115.19 123.38" xml:space="preserve">
         <style type="text/css">
             .st0{fill-rule:evenodd;clip-rule:evenodd;fill:#fff;stroke:#fff;stroke-width:0.5;stroke-miterlimit:2.6131;}
         </style>
@@ -14,4 +14,4 @@
     </svg>
 </ng-template>
 <p><b>Título: </b>{{tvShows.show.name}}</p>
-
+<app-modal [showInfos]="tvShows" #modal></app-modal>
