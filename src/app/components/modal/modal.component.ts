@@ -15,7 +15,7 @@ export class ModalComponent {
   
   showModal() {
     this.show = !this.show;
-  }
+  } 
   close() {
     this.show = !this.show;
   }

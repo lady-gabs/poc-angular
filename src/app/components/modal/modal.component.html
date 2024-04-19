@@ -1,10 +1,10 @@
 <div class="modal" (click)="close()" *ngIf="show">
     <div class="tvShowInfos">
         <h1>{{ showInfos.show.name }}</h1>
-        <div *ngIf="showInfos.show.summary !== null">{{ showInfos.show.summary }}</div>
+        <div *ngIf="showInfos.show.summary !== null" [innerHtml]="showInfos.show.summary"></div>
         <div *ngIf="showInfos.show.image !== null">
             <img width="200px" srcset="{{showInfos.show.image.medium}}" alt="{{showInfos.show.name}}">
         </div>
         <app-rating *ngIf="showInfos.show.rating.average !== null" [rating]="showInfos.show.rating.average"></app-rating>
     </div>
-</div>
+</div> 
