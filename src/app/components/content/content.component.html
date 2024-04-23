@@ -1,5 +1,5 @@
 <app-header (emitData)="searchShow($event)"></app-header>
-<ul *ngIf="results.length !== 0">
+<ul>
     <li *ngFor="let result of results">
         <app-cards [tvShows]="result"></app-cards>
     </li>

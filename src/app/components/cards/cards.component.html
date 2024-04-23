@@ -1,5 +1,3 @@
-<!-- <p>cards works!</p> -->
-
 <div *ngIf="tvShows.show.image !== null; else withImage">
     <img width="200px" srcset="{{tvShows.show.image.medium}}" alt="{{tvShows.show.name}}" (click)="modal.showModal()">
 </div>

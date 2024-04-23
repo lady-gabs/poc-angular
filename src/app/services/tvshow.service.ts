@@ -11,9 +11,23 @@ export class TvshowService {
   constructor(private http: HttpClient) { }
   
   async getShows(value: string) {
-    let responseApi = (await fetch(`${this.api}+${value}`));
-    let result = await responseApi.json()
-    return result;
+
+    try {
+      if (value === '') {
+          throw new Error('Insira um título.');
+      }
+
+      let responseApi = (await fetch(`${this.api}+${value}`));
+      let result = await responseApi.json()
+
+      if (result.length < 1) {
+          throw new Error('Request failed.');
+      }
+
+      return result;
+    } catch (error) {
+        alert(error);
+    }
   }
   
 }

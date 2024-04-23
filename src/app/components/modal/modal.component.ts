@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, ElementRef, HostListener, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RatingComponent } from '../rating/rating.component';
 
@@ -17,6 +17,6 @@ export class ModalComponent {
     this.show = !this.show;
   } 
   close() {
-    this.show = !this.show;
+    this.show = false;
   }
 }

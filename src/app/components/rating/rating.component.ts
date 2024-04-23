@@ -10,10 +10,13 @@ import { CommonModule } from '@angular/common';
 })
 export class RatingComponent {
   @Input() rating: number = 0;
-  rateDecimal = this.rating - Math.floor(this.rating);
+  rateDecimal: number = 0;
   arrayStars: any = [];
-  semiStar =  `inset(0 ${100 - (this.rateDecimal*100)}% 0 0)`;
+  semiStar: string = '';
+  
   ngOnInit() {
     this.arrayStars = Array(Math.floor(this.rating)).fill(1);
+    this.rateDecimal = 100-((this.rating - Math.floor(this.rating))*100);
+    this.semiStar =  `inset(0 ${this.rateDecimal}% 0 0)`;
   }
 }
