@@ -1,4 +1,5 @@
 <app-header (emitData)="searchShow($event)"></app-header>
+<h2 *ngIf="results.length != 0">Resultados para: {{search}}</h2>
 <ul>
     <li *ngFor="let result of results">
         <app-cards [tvShows]="result"></app-cards>

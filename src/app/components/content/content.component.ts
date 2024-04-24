@@ -13,10 +13,12 @@ import { TvshowService } from '../../services/tvshow.service';
 })
 export class ContentComponent {
   results = [];
+  search = "";
 
   constructor(private showService: TvshowService) { }
   
   async searchShow(value: string){
+    this.search = value;
     this.results = await this.showService.getShows(value);
     console.log(this.results);
   }

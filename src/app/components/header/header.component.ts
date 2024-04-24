@@ -13,7 +13,9 @@ export class HeaderComponent {
   @Output() emitData: EventEmitter<any> = new EventEmitter();
   value: string = "";
 
+  
   sendData(){
+    document.getElementById('tvShowInput')?.focus();
     this.emitData.emit(this.value);
   }
 }

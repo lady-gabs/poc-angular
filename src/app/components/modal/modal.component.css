@@ -7,9 +7,10 @@
 } */
 
 .tvShowInfos {
-    margin: -25% 10%;
+    top: 100px;
+    left: 150px;
     position: fixed;
-    z-index: 999999999999; 
+    z-index: 1; 
     background-color: #D3D3D3;
     padding: 20px;
     border-radius: 5px;
