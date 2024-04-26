@@ -1,3 +1,9 @@
 h2 {
     padding-left:50px;
 }
+mat-paginator{
+    background-color:transparent;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+}

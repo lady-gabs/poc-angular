@@ -1,5 +1,5 @@
 <div *ngIf="tvShows.show.image !== null; else withImage">
-    <img width="200px" srcset="{{tvShows.show.image.medium}}" alt="{{tvShows.show.name}}" (click)="modal.showModal()">
+    <img width="200px" src="{{tvShows.show.image.medium}}" alt="{{tvShows.show.name}}" (click)="modal.showModal()">
 </div>
 <ng-template #withImage>
     <svg (click)="modal.showModal()" width="200px" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0px" y="0px" viewBox="0 0 115.19 123.38" xml:space="preserve">

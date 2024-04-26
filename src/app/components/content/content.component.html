@@ -1,7 +1,21 @@
 <app-header (emitData)="searchShow($event)"></app-header>
-<h2 *ngIf="results.length != 0">Resultados para: {{search}}</h2>
-<ul>
-    <li *ngFor="let result of results">
-        <app-cards [tvShows]="result"></app-cards>
-    </li>
-</ul>
+<div *ngIf="results.length === 0; else showResults">
+    <h2>Pesquise por uma série de TV.</h2>
+</div>
+<ng-template #showResults>
+    <h2>Resultados para: {{search}}</h2>
+    <ul>
+        <li *ngFor="let result of results">
+            <app-cards [tvShows]="result"></app-cards>
+        </li>
+    </ul>
+    <mat-paginator [length]="results.length"
+        (page)="handlePageEvent($event)"
+        [pageSize]="5"
+        [disabled]="false"
+        [showFirstLastButtons]="false"
+        [hidePageSize]="true"
+        [pageIndex]="0"
+        aria-label="Select page">
+    </mat-paginator>
+</ng-template>
