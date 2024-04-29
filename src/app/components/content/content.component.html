@@ -9,13 +9,4 @@
             <app-cards [tvShows]="result"></app-cards>
         </li>
     </ul>
-    <mat-paginator [length]="results.length"
-        (page)="handlePageEvent($event)"
-        [pageSize]="5"
-        [disabled]="false"
-        [showFirstLastButtons]="false"
-        [hidePageSize]="true"
-        [pageIndex]="0"
-        aria-label="Select page">
-    </mat-paginator>
 </ng-template>

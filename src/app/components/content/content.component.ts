@@ -23,8 +23,5 @@ export class ContentComponent {
     this.results = await this.showService.getShows(value);
     console.log(this.results);
   }
-  handlePageEvent(e: PageEvent) {
-
-  }
 
 }
