@@ -1,6 +1,5 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
-import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -21,7 +20,7 @@ export class TvshowService {
       let result = await responseApi.json()
 
       if (result.length < 1) {
-          throw new Error('Request failed.');
+          throw new Error('A pesquisa não retornou resultados.');
       }
 
       return result;
